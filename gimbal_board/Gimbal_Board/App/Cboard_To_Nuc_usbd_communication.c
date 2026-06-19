@@ -164,7 +164,7 @@ void NUC_USBD_Tx(uint8_t cmdid)
 		Referee_Data_Transmit.bumpy_exist_enemy = 0;
 		Referee_Data_Transmit.enemy_base_flower = 0;
 		Referee_Data_Transmit.could_fire = Game_Robot_State.power_management_shooter_output;
-		Referee_Data_Transmit.big_pitch_fold = 1;
+		//Referee_Data_Transmit.big_pitch_state = gimbal_control.big_pitch_state;
 
 		if(Robot_Command.target_position_x == 0 && Robot_Command.target_position_y == 0)
 			Referee_Data_Transmit.rush_home = 0;

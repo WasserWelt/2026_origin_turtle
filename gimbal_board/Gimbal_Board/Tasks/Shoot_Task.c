@@ -170,9 +170,9 @@ void Fric_Start_Update()
 	bool_t start_fric;
 
 #if HAVE_REFEREE_SYSTEM
-	start_fric = ((rc_ctrl.rc.s[1] == RC_SW_UP) || ((rc_ctrl.rc.s[1] == RC_SW_MID) && (rc_ctrl.rc.s[0] != RC_SW_DOWN))) && Game_Robot_State.power_management_shooter_output == 0x01;
+	start_fric = ((rc_ctrl.rc.s[1] == RC_SW_UP) || ((rc_ctrl.rc.s[1] == RC_SW_MID) && (rc_ctrl.rc.s[0] == RC_SW_UP))) && Game_Robot_State.power_management_shooter_output == 0x01;
 #else
-	start_fric = ((rc_ctrl.rc.s[1] == RC_SW_UP) || ((rc_ctrl.rc.s[1] == RC_SW_MID) && (rc_ctrl.rc.s[0] != RC_SW_DOWN)));
+	start_fric = ((rc_ctrl.rc.s[1] == RC_SW_UP) || ((rc_ctrl.rc.s[1] == RC_SW_MID) && (rc_ctrl.rc.s[0] == RC_SW_UP)));
 #endif
 
 	if (start_fric)
@@ -475,7 +475,7 @@ void Shoot_Task(void const *argument)
 		Dial_Motor_Control();
 
 //		Allocate_Can_Msg(fric_motor[0].give_current, fric_motor[1].give_current, 0, 0, CAN_FRIC_CMD);
-		Allocate_Can_Msg(0, 0, 0, 0, CAN_FRIC_CMD);
+		//Allocate_Can_Msg(fric_motor[0].give_current, fric_motor[1].give_current, 0, 0, CAN_FRIC_CMD);
 		Allocate_Can_Msg(LK_MOTOR_TORQUE_CONTROL_CMD_ID, 0, LK_dial_motor.give_current, 0, CAN_DIAL_CMD);
 		// Vofa_Send_Data4(shoot_control.current_heat_without_referee*(-100), motor_measure_fric[0].given_current, motor_measure_fric[1].given_current, 0);
 

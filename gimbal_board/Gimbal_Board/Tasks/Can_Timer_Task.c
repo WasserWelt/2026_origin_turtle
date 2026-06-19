@@ -62,7 +62,16 @@ void CAN2_Timer_Callback(TimerHandle_t xTimer)
 
 void DM_IMU_Timer_Callback(TimerHandle_t xTimer)
 {
-    imu_request_gyro();
+    //imu_request_gyro();
+    uint32_t send_mail_box;
+    
+    if (HAL_CAN_AddTxMessage(&hcan2, &small_pitch_send_msg.tx_header, small_pitch_send_msg.data, &send_mail_box) != HAL_OK)
+    {
+        if (HAL_CAN_AddTxMessage(&hcan2, &small_pitch_send_msg.tx_header, small_pitch_send_msg.data, &send_mail_box) != HAL_OK)
+        {
+            HAL_CAN_AddTxMessage(&hcan2, &small_pitch_send_msg.tx_header, small_pitch_send_msg.data, &send_mail_box);
+        }
+    }
 }
 
 void DM_BIG_YAW_Timer_Callback(TimerHandle_t xTimer)

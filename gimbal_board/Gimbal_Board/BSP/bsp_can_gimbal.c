@@ -43,7 +43,7 @@ QueueHandle_t CAN2_send_queue; // CAN2消息队列句柄，此队列用于储存CAN2第一次发送
 #define GIMBAL_TO_CHASSIS_THIRD_SEND_QUEUE CAN1_send_queue  // 上下板通讯改到CAN1
 #define BIG_PITCH_SEND_QUEUE CAN1_send_queue
 #define BIG_YAW_DM6006_SEND_QUEUE CAN1_send_queue           // 大Yaw改到CAN1
-#define SMALL_YAW_AND_PITCH_SEND_QUEUE CAN1_send_queue
+#define SMALL_YAW_SEND_QUEUE CAN1_send_queue
 #define DIAL_SEND_QUEUE CAN2_send_queue
 #define FRIC_M3508_SEND_QUEUE CAN2_send_queue                // 摩擦轮改到CAN2
 #define SMALL_PITCH_SEND_QUEUE CAN2_send_queue
@@ -53,7 +53,7 @@ CanTxMsgTypeDef gimbal_to_chassis_second_send_msg; // 传导航和裁判系统数据到下板
 CanTxMsgTypeDef gimbal_to_chassis_third_send_msg;  // 传什么待定
 CanTxMsgTypeDef big_yaw_send_msg;                  // 大yaw轴达妙6006 can报文
 CanTxMsgTypeDef big_pitch_send_msg;                // 大Pitch DM4340 MIT can报文
-CanTxMsgTypeDef small_yaw_and_pitch_send_msg;      // pitch轴，小yaw轴6020 can报文
+CanTxMsgTypeDef small_yaw_send_msg;                // pitch轴，小yaw轴6020 can报文
 CanTxMsgTypeDef fric_send_msg;                     // 摩擦轮3508can报文
 CanTxMsgTypeDef dial_send_msg;                     // 拨弹盘can报文
 CanTxMsgTypeDef small_pitch_send_msg;              // 小Pitch MF6015 LK can报文
@@ -104,7 +104,7 @@ void Can_Msg_Init(void)
         {&gimbal_to_chassis_third_send_msg, GIMBAL_TO_CHASSIS_THIRD_ID},
         {&big_yaw_send_msg, BIG_YAW_DM6006_TransID},
         {&big_pitch_send_msg, BIG_PITCH_DM4340_TransID},
-        {&small_yaw_and_pitch_send_msg, SMALL_YAW_AND_PITCH_TransID},
+        {&small_yaw_send_msg, SMALL_YAW_TransID},
         {&fric_send_msg, FRIC_M3508_TransID},
         {&dial_send_msg, DIAL_TransID},
         {&small_pitch_send_msg, SMALL_PITCH_MF6015_CMD}};
@@ -269,8 +269,7 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
         }
         case SMALL_PITCH_MF6015_RecID:
         {
-            get_motor_measure_LK(&motor_measure_pitch, rx_data);
-            detect_hook(SMALL_PITCH_MF6015_TOE);
+            get_motor_measure(&motor_measure_pitch, rx_data);
             break;
         }
         case DIAL_RecID:
@@ -341,14 +340,14 @@ void Allocate_Can_Msg(int16_t data1, int16_t data2, int16_t data3, int16_t data4
         //xQueueSend(BIG_YAW_DM6006_SEND_QUEUE, &big_yaw_send_msg, 0); // 向队列中填充内容
         break;
     }
-    case CAN_SMALL_YAW_AND_PITCH_CMD:
+    case CAN_SMALL_YAW_CMD:
     {
         for (int i = 0; i < 4; i++)
         {
-            small_yaw_and_pitch_send_msg.data[2 * i] = (data_array[i] >> 8) & 0xFF; // 高8位
-            small_yaw_and_pitch_send_msg.data[2 * i + 1] = data_array[i] & 0xFF;    // 低8位
+            small_yaw_send_msg.data[2 * i] = (data_array[i] >> 8) & 0xFF; // 高8位
+            small_yaw_send_msg.data[2 * i + 1] = data_array[i] & 0xFF;    // 低8位
         }
-        xQueueSend(SMALL_YAW_AND_PITCH_SEND_QUEUE, &small_yaw_and_pitch_send_msg, 0); // 向队列中填充内容
+        xQueueSend(SMALL_YAW_SEND_QUEUE, &small_yaw_send_msg, 0); // 向队列中填充内容
         break;
     }
     case CAN_FRIC_CMD:
@@ -388,7 +387,7 @@ void Allocate_Can_Msg(int16_t data1, int16_t data2, int16_t data3, int16_t data4
             small_pitch_send_msg.data[2 * i] = data_array[i] & 0xFF;            // 低8位
             small_pitch_send_msg.data[2 * i + 1] = (data_array[i] >> 8) & 0xFF; // 高8位
         }
-        xQueueSend(SMALL_PITCH_SEND_QUEUE, &small_pitch_send_msg, 0); // 向队列中填充内容
+        //xQueueSend(SMALL_PITCH_SEND_QUEUE, &small_pitch_send_msg, 0); // 向队列中填充内容
         break;
     }
     default:

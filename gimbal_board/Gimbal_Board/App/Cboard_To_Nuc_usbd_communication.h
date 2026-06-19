@@ -86,7 +86,7 @@ typedef struct
 	uint8_t bumpy_exist_enemy; // 1有人0没人，只管我方半场
 	uint8_t enemy_base_flower; //1基地开花，0基地未开花
 	uint8_t could_fire; //发射机构是否解锁
-	uint8_t big_pitch_fold; //1完成展开，0完成折叠
+	uint8_t big_pitch_state; //2完成展开，1完成折叠
 } __attribute__((__packed__)) Referee_Data_Tx;
 /*******************************************END**********************************************/
 
@@ -115,6 +115,7 @@ typedef struct
 	float vx;
 	float vy;
 	float pass_tunnel_yaw_angle;
+	uint8_t big_pitch_target_state; //0展开，1折叠
 	bool_t updownhill_state;		 // 是否正在上坡
 	bool_t ready_catch_hero; // 是否到达抓英雄的点位
 } __attribute__((__packed__)) NUC_Data_Rx;

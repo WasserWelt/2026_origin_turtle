@@ -174,7 +174,8 @@ static void Chassis_Data_Update(void)
 static void Chassis_Mode_Update(chassis_mode_t *mode)
 {
 	bool_t rc_ctrl_follow_gimbal = ((chassis_rc_ctrl.s[1] == RC_SW_MID) && (chassis_rc_ctrl.ch[4] < 2000 /*500*/) && (chassis_rc_ctrl.ch[4] > -2000 /*-500*/)); // 是否满足遥控器控制时底盘跟随云台模式，下面以此类推
-	bool_t rc_ctrl_rotate = ((chassis_rc_ctrl.s[1] == RC_SW_MID) && !rc_ctrl_follow_gimbal);
+	bool_t big_pitch_fold_protect = (!rc_ctrl_follow_gimbal && chassis_rc_ctrl.s[0] == RC_SW_MID);
+	bool_t rc_ctrl_rotate = ((chassis_rc_ctrl.s[1] == RC_SW_MID) && !rc_ctrl_follow_gimbal && !big_pitch_fold_protect);
 	bool_t rc_ctrl_safe = ((chassis_rc_ctrl.s[1] == RC_SW_DOWN) || toe_is_error(RC_TOE)) || toe_is_error(WHEEL_MOTOR_1_TOE) || toe_is_error(WHEEL_MOTOR_2_TOE) || toe_is_error(WHEEL_MOTOR_3_TOE) || toe_is_error(WHEEL_MOTOR_4_TOE);
 	bool_t nav_follow_gimbal = (chassis_rc_ctrl.s[1] == RC_SW_UP) && (nav_ctrl.chassis_target_mode == NAV_CHASSIS_FOLLOW_GIMBAL);			   // 是否满足导航模式下底盘跟随云台模式，下面以此类推
 	bool_t nav_rotate = ((chassis_rc_ctrl.s[1] == RC_SW_UP) && (nav_ctrl.chassis_target_mode == NAV_CHASSIS_ROTATE || toe_is_error(NAV_TOE))); // 上板导航数据没传下来就进陀螺模式
@@ -189,7 +190,7 @@ static void Chassis_Mode_Update(chassis_mode_t *mode)
 	{
 		*mode = ROTATE;
 	}
-	else if (rc_ctrl_follow_gimbal || nav_follow_gimbal)
+	else if (rc_ctrl_follow_gimbal || nav_follow_gimbal || big_pitch_fold_protect)
 	{
 		*mode = FOLLOW_GIMBAL;
 	}

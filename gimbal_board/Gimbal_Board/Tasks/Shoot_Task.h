@@ -3,7 +3,7 @@
 
 #include "main.h"
 
-#define HAVE_REFEREE_SYSTEM 1 // 哨兵当前是否安装裁判系统
+#define HAVE_REFEREE_SYSTEM 0 // 哨兵当前是否安装裁判系统
 
 #define DIAL_MOTOR_SPEED_PID_KP 0.7f
 #define DIAL_MOTOR_SPEED_PID_KI 0.05f

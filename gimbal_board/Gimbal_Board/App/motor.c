@@ -12,7 +12,7 @@
 motor_measure_t motor_measure_steer[4] = {0};  // 底盘舵电机6020
 motor_measure_t motor_measure_wheel[4] = {0};  // 底盘轮电机3508
 motor_measure_t motor_measure_small_yaw = {0}; // 小yaw电机6020
-LK_motor_measure_t motor_measure_pitch = {0}; // pitch MF6015 (LK协议)
+motor_measure_t motor_measure_pitch = {0}; // pitch MF6015 (LK协议)
 motor_measure_t motor_measure_fric[2] = {0};  // 摩擦轮电机3508
 LK_motor_measure_t motor_measure_dial = {0}; // 拨弹盘电机
 /***********************电机控制结构体***********************************/

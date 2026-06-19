@@ -12,7 +12,7 @@
 #define RAD_TO_DEGREE 57.295779f
 #define GM6020_ENC_TO_DEGREE 0.043945f //  360/8192
 /****************************************重力补偿参数*******************************************************/
-#define PITCH_MOTOR_GRAVITY_STATIC_COMPENSATE (5300) // 用于补偿重力，pitch轴质心与转轴的连线与地面平行时抵消重力所需的力矩，单位是发给6020电机的目标电流
+#define PITCH_MOTOR_GRAVITY_STATIC_COMPENSATE (0) // 用于补偿重力，pitch轴质心与转轴的连线与地面平行时抵消重力所需的力矩，单位是发给6020电机的目标电流
 #define PITCH_CENTROID_OFFSET_ANGLE -55.28313f // 补偿pitch的INS_angle
 /**************************************************PID,前馈系数************************************************************************/
 #define BIG_YAW_MOTOR_SPEED_PID_KP 0.05f
@@ -57,9 +57,11 @@
 #define SMALL_YAW_MOTOR_RC_SPEED_PID_KD 10.0f
 
 #define SMALL_YAW_MOTOR_SPEED_PID_MAX_OUT 16000.0f
-#define SMALL_YAW_MOTOR_SPEED_PID_MAX_IOUT 3000.0f
-#define SMALL_YAW_MOTOR_SPEED_FF 0.0f  //8
-#define SMALL_YAW_MOTOR_CURRENT_FF 0.0f //40
+#define SMALL_YAW_MOTOR_SPEED_PID_MAX_IOUT 1000.0f
+#define SMALL_YAW_MOTOR_MPC_SPEED_FF 0.8f         
+#define SMALL_YAW_MOTOR_ANGLE_ERROR_SPEED_FF 20.0f // 40
+#define SMALL_YAW_MOTOR_MPC_CURRENT_FF 80.0f //40
+#define SMALL_YAW_MOTOR_SPEED_ERROR_CURRENT_FF 20.0f // 40
 
 #define SMALL_YAW_MOTOR_ANGLE_PID_KP 5.0f //20
 #define SMALL_YAW_MOTOR_ANGLE_PID_KI 0.0f
@@ -73,13 +75,15 @@
 #define SMALL_YAW_MOTOR_AUTO_AIM_PID_MAX_OUT 2000.0f
 #define SMALL_YAW_MOTOR_AUTO_AIM_PID_MAX_IOUT 70.0f
 
-#define PITCH_MOTOR_SPEED_PID_KP 190.0f
+#define PITCH_MOTOR_SPEED_PID_KP 200.0f
 #define PITCH_MOTOR_SPEED_PID_KI 0.0008f
 #define PITCH_MOTOR_SPEED_PID_KD 12.0f
 #define PITCH_MOTOR_SPEED_PID_MAX_OUT 16000.0f
 #define PITCH_MOTOR_SPEED_PID_MAX_IOUT 100.0f
-#define PITCH_MOTOR_SPEED_FF 5.0f
-#define PITCH_MOTOR_CURRENT_FF 10.0f
+#define PITCH_MOTOR_MPC_SPEED_FF 0.8f
+#define PITCH_MOTOR_ANGLE_ERROR_SPEED_FF 5.0f   
+#define PITCH_MOTOR_MPC_CURRENT_FF 80.0f         
+#define PITCH_MOTOR_SPEED_ERROR_CURRENT_FF 10.0f 
 
 #define PITCH_MOTOR_ANGLE_PID_KP 30.0f // 0.2f
 #define PITCH_MOTOR_ANGLE_PID_KI 0.0f
@@ -102,10 +106,10 @@
 #define SMALL_YAW_AUTOAIM_ECD_MAX 5970
 #define SMALL_YAW_AUTOAIM_ECD_MIN 4704
 
-// #define PITCH_ECD_ANGLE_MAX (4350 * GM6020_ENC_TO_DEGREE) // pitch轴电子限位最大角度，用编码器值标定 1780
-// #define PITCH_ECD_ANGLE_MIN (3200 * GM6020_ENC_TO_DEGREE) // pitch轴电子限位最小角度，用编码器值标定 530
-#define PITCH_ECD_ANGLE_MAX (MF6015_ECD_ANGLE_MAX * MF6015_ENC_TO_DEGREE) // pitch轴电子限位最大角度，用编码器值标定
-#define PITCH_ECD_ANGLE_MIN (MF6015_ECD_ANGLE_MIN * MF6015_ENC_TO_DEGREE) // pitch轴电子限位最小角度，用编码器值标定
+#define PITCH_ECD_ANGLE_MAX (7827 * GM6020_ENC_TO_DEGREE) // pitch轴电子限位最大角度，用编码器值标定 7927
+#define PITCH_ECD_ANGLE_MIN (2187 * GM6020_ENC_TO_DEGREE) // pitch轴电子限位最小角度，用编码器值标定 2087
+//#define PITCH_ECD_ANGLE_MAX (MF6015_ECD_ANGLE_MAX * MF6015_ENC_TO_DEGREE) // pitch轴电子限位最大角度，用编码器值标定
+//#define PITCH_ECD_ANGLE_MIN (MF6015_ECD_ANGLE_MIN * MF6015_ENC_TO_DEGREE) // pitch轴电子限位最小角度，用编码器值标定
 
 #define PITCH_NAV_SEEK_ENEMY_ANGLE_MAX 4.0f 
 #define PITCH_NAV_SEEK_ENEMY_ANGLE_MIN -20.0f 
@@ -124,7 +128,7 @@
 #define BIG_PITCH_SPEED_KP        0.1f
 #define BIG_PITCH_SPEED_KI        0.0001f
 #define BIG_PITCH_SPEED_KD        0.0f
-#define BIG_PITCH_SPEED_MAX_OUT   10.0f
+#define BIG_PITCH_SPEED_MAX_OUT   13.0f
 #define BIG_PITCH_SPEED_MAX_IOUT  0.1f
 
 #define BIG_PITCH_ANGLE_KP        20.0f
@@ -134,8 +138,8 @@
 #define BIG_PITCH_ANGLE_MAX_IOUT  0.0f
 
 #define BIG_PITCH_ANGLE_MAX       (BIG_PITCH_STRETCH_ANGLE - 22.0f)   // 展开限位
-#define BIG_PITCH_ANGLE_MIN       (BIG_PITCH_FOLD_ANGLE + 8.0f)   // 折叠限位
-#define BIG_PITCH_FOLD_ANGLE      -48.0f   // 折叠角度
+#define BIG_PITCH_ANGLE_MIN       (BIG_PITCH_FOLD_ANGLE + 11.0f)   // 折叠限位
+#define BIG_PITCH_FOLD_ANGLE      -51.0f   // 折叠角度
 #define BIG_PITCH_STRETCH_ANGLE   45.0f   // 展开角度
 // ============== 小Pitch MF6015 编码器配置 ==============
 #define MF6015_ENC_RESOLUTION     65535   // 16位编码器，满量程
@@ -144,6 +148,8 @@
 // 跳变阈值：编码器零点附近和量程边界的跳变处理边界（电机实际编码器，非角度值）
 #define MF6015_ECD_ANGLE_MAX     60200    // 编码器上限阈值
 #define MF6015_ECD_ANGLE_MIN     18900    // 编码器下限阈值
+
+extern void Big_Pitch_Motor_Control(void);
 
 void Gimbal_Task(void const *argument);
 
