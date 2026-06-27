@@ -474,8 +474,7 @@ void Shoot_Task(void const *argument)
 		Fric_Motor_Current_Control();
 		Dial_Motor_Control();
 
-//		Allocate_Can_Msg(fric_motor[0].give_current, fric_motor[1].give_current, 0, 0, CAN_FRIC_CMD);
-		//Allocate_Can_Msg(fric_motor[0].give_current, fric_motor[1].give_current, 0, 0, CAN_FRIC_CMD);
+		Allocate_Can_Msg(fric_motor[0].give_current, fric_motor[1].give_current, 0, 0, CAN_FRIC_CMD);
 		Allocate_Can_Msg(LK_MOTOR_TORQUE_CONTROL_CMD_ID, 0, LK_dial_motor.give_current, 0, CAN_DIAL_CMD);
 		// Vofa_Send_Data4(shoot_control.current_heat_without_referee*(-100), motor_measure_fric[0].given_current, motor_measure_fric[1].given_current, 0);
 

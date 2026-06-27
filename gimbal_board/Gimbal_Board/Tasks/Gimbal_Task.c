@@ -203,13 +203,12 @@ static void Gimbal_Data_Update(void)
     gimbal_small_yaw_motor.INS_angle_now = imu.yaw;
 
     // 处理小yaw电机位置编码器值的跳变问题
-    // 龟龟安装方向变了，所以加了负号
     if (SMALL_YAW_MIDDLE_ENC_ZERO < 1500 && motor_measure_small_yaw.ecd > 6692)
-        gimbal_small_yaw_motor.ENC_angle_now = (motor_measure_small_yaw.ecd - 8192) * GM6020_ENC_TO_DEGREE;
+        gimbal_small_yaw_motor.ENC_angle_now = -(motor_measure_small_yaw.ecd - 8192) * GM6020_ENC_TO_DEGREE;
     else if (SMALL_YAW_MIDDLE_ENC_ZERO > 6692 && motor_measure_small_yaw.ecd < 1500)
-        gimbal_small_yaw_motor.ENC_angle_now = (motor_measure_small_yaw.ecd + 8192) * GM6020_ENC_TO_DEGREE;
+        gimbal_small_yaw_motor.ENC_angle_now = -(motor_measure_small_yaw.ecd + 8192) * GM6020_ENC_TO_DEGREE;
     else
-        gimbal_small_yaw_motor.ENC_angle_now = motor_measure_small_yaw.ecd * GM6020_ENC_TO_DEGREE;
+        gimbal_small_yaw_motor.ENC_angle_now = -motor_measure_small_yaw.ecd * GM6020_ENC_TO_DEGREE;
 
     const float lpf_coeff = 0.5f; // 低通滤波系数
     DM_big_yaw_motor.INS_angle_set_last = DM_big_yaw_motor.INS_angle_set;
@@ -495,7 +494,7 @@ static void Calculate_Gimbal_Motor_Target_Current(pid_type_def *gimbal_motor_pid
     switch (motor_type)
     {
     case PITCH_MOTOR:
-    //case SMALL_YAW_MOTOR:
+    case SMALL_YAW_MOTOR:
     {
         gimbal_motor_t *motor = (motor_type == PITCH_MOTOR) ? &gimbal_pitch_motor : &gimbal_small_yaw_motor;
         
@@ -937,8 +936,7 @@ void Gimbal_Task(void const *argument)
         {
             Ctrl_DM_BigPitch(0.0f, 0.0f, 0.0f, 0.0f, DM_big_pitch_motor.target_current);
         }
-        Ctrl_DM_Motor(0, 0, 0, 0, DM_big_yaw_motor.target_current);
-//      Allocate_Can_Msg(-gimbal_small_yaw_motor.give_current, 0, 0, 0, CAN_SMALL_YAW_CMD); //CMD名字先不改了，反馈方向反一下
+        Ctrl_DM_Motor(0, 0, 0, 0, DM_big_yaw_motor.target_current);//-gimbal_small_yaw_motor.give_current
         Allocate_Can_Msg(0, 0, 0, 0, CAN_SMALL_YAW_CMD); //CMD名字先不改了，反馈方向反一下
         vTaskDelay(1);
         Allocate_Can_Msg(0, 0, 0, 0, CAN_SMALL_PITCH_CMD);

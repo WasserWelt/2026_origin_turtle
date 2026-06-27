@@ -591,6 +591,14 @@ void Chassis_Task(void const *argument)
 
 		Allocate_Can_Msg(chassis_wheel_motor[0].give_current, chassis_wheel_motor[1].give_current,
 		                 chassis_wheel_motor[2].give_current, chassis_wheel_motor[3].give_current, CAN_WHEEL_M3508_CMD);
+#if HAVE_REFEREE_SYSTEM
+		if (!toe_is_error(NAV_TOE))
+			Allocate_Can_Msg(nav_ctrl.referee_power_limit - 10, 0, nav_ctrl.buffer_energy_remain, 0, CAN_CAP_CMD);
+		else
+			Allocate_Can_Msg(20, 0, 0, 0, CAN_CAP_CMD);
+#else
+		Allocate_Can_Msg(90, 0, 0, 0, CAN_CAP_CMD);
+#endif
 		Vofa_Send_Data4(chassis_wheel_motor[0].give_current, chassis_wheel_motor[0].speed_set, chassis_wheel_motor[2].speed_now, 0);
 		vTaskDelay(2);
 	}

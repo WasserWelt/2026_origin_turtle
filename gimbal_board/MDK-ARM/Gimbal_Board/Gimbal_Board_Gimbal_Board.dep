@@ -69,7 +69,7 @@ I (D:\MDK-ARM\core\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (D:\MDK-ARM\core\ARM\ARMCC\include\stdlib.h)(0x60252374)
 I (D:\MDK-ARM\core\ARM\ARMCC\include\string.h)(0x6025237E)
 I (../Inc/gpio.h)(0x6A16F62D)
-I (../Gimbal_Board/BSP/bsp_can_gimbal.h)(0x6A3547C6)
+I (../Gimbal_Board/BSP/bsp_can_gimbal.h)(0x6A357CF0)
 I (../Gimbal_Board/App/pid.h)(0x6A16F62D)
 I (../Gimbal_Board/App/struct_typedef.h)(0x6A16F62D)
 I (../Gimbal_Board/BSP/bsp_usart.h)(0x6A16F62D)
@@ -77,7 +77,7 @@ I (../Gimbal_Board/BSP/bsp_delay.h)(0x6A16F62D)
 I (../Gimbal_Board/BSP/bsp_DMIMU.h)(0x6A16F62D)
 I (../Gimbal_Board/App/remote_control.h)(0x6A16F62D)
 I (../Gimbal_Board/BSP/bsp_rc.h)(0x6A16F62D)
-I (../Gimbal_Board/App/motor.h)(0x6A32F009)
+I (../Gimbal_Board/App/motor.h)(0x6A3567BD)
 I (../Gimbal_Board/App/Referee.h)(0x6A227781)
 I (../Gimbal_Board/App/protocol.h)(0x6A16F62D)
 I (../Gimbal_Board/support/fifo.h)(0x6A16F62D)
@@ -2636,9 +2636,9 @@ I (../Gimbal_Board/support/crcs.h)(0x6A16F62D)
 I (../Gimbal_Board/App/referee.h)(0x6A227781)
 I (../Gimbal_Board/BSP/bsp_usart.h)(0x6A16F62D)
 I (../Gimbal_Board/App/struct_typedef.h)(0x6A16F62D)
-F (..\Gimbal_Board\Tasks\Can_Timer_Task.c)(0x6A3547F0)(--c99 -c --cpu Cortex-M4.fp.sp -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Gimbal_Board/Drvs -I ../Gimbal_Board/support -I ../Gimbal_Board/Tasks -I ../Gimbal_Board/BSP -I ../Gimbal_Board/App -I ../Gimbal_Board/algorithm-I.\RTE\_Gimbal_Board-ID:\MDK-ARM\pack\ARM\CMSIS-DSP\1.16.2\Include-ID:\MDK-ARM\pack\ARM\CMSIS-DSP\1.16.2\PrivateInclude-ID:\MDK-ARM\pack\ARM\CMSIS\5.8.0\CMSIS\Core\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -D__FPU_USED="1U" -D__FPU_PRESENT="1U" -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o gimbal_board\can_timer_task.o --omf_browse gimbal_board\can_timer_task.crf --depend gimbal_board\can_timer_task.d)
+F (..\Gimbal_Board\Tasks\Can_Timer_Task.c)(0x6A356710)(--c99 -c --cpu Cortex-M4.fp.sp -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Gimbal_Board/Drvs -I ../Gimbal_Board/support -I ../Gimbal_Board/Tasks -I ../Gimbal_Board/BSP -I ../Gimbal_Board/App -I ../Gimbal_Board/algorithm-I.\RTE\_Gimbal_Board-ID:\MDK-ARM\pack\ARM\CMSIS-DSP\1.16.2\Include-ID:\MDK-ARM\pack\ARM\CMSIS-DSP\1.16.2\PrivateInclude-ID:\MDK-ARM\pack\ARM\CMSIS\5.8.0\CMSIS\Core\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -D__FPU_USED="1U" -D__FPU_PRESENT="1U" -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o gimbal_board\can_timer_task.o --omf_browse gimbal_board\can_timer_task.crf --depend gimbal_board\can_timer_task.d)
 I (..\Gimbal_Board\Tasks\Can_Timer_Task.h)(0x6A16F62D)
-I (../Gimbal_Board/BSP/bsp_can_gimbal.h)(0x6A3547C6)
+I (../Gimbal_Board/BSP/bsp_can_gimbal.h)(0x6A357CF0)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x6A16F62E)
 I (D:\MDK-ARM\core\ARM\ARMCC\include\stddef.h)(0x6025237E)
 I (D:\MDK-ARM\core\ARM\ARMCC\include\stdint.h)(0x6025237E)
@@ -2697,7 +2697,7 @@ I (../Gimbal_Board/App/pid.h)(0x6A16F62D)
 I (../Gimbal_Board/App/struct_typedef.h)(0x6A16F62D)
 I (../Gimbal_Board/BSP/bsp_DMIMU.h)(0x6A16F62D)
 F (..\Gimbal_Board\Tasks\Send_Chassis_Task.c)(0x6A1ED61E)(--c99 -c --cpu Cortex-M4.fp.sp -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Gimbal_Board/Drvs -I ../Gimbal_Board/support -I ../Gimbal_Board/Tasks -I ../Gimbal_Board/BSP -I ../Gimbal_Board/App -I ../Gimbal_Board/algorithm-I.\RTE\_Gimbal_Board-ID:\MDK-ARM\pack\ARM\CMSIS-DSP\1.16.2\Include-ID:\MDK-ARM\pack\ARM\CMSIS-DSP\1.16.2\PrivateInclude-ID:\MDK-ARM\pack\ARM\CMSIS\5.8.0\CMSIS\Core\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -D__FPU_USED="1U" -D__FPU_PRESENT="1U" -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o gimbal_board\send_chassis_task.o --omf_browse gimbal_board\send_chassis_task.crf --depend gimbal_board\send_chassis_task.d)
-I (../Gimbal_Board/BSP/bsp_can_gimbal.h)(0x6A3547C6)
+I (../Gimbal_Board/BSP/bsp_can_gimbal.h)(0x6A357CF0)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x6A16F62E)
 I (D:\MDK-ARM\core\ARM\ARMCC\include\stddef.h)(0x6025237E)
 I (D:\MDK-ARM\core\ARM\ARMCC\include\stdint.h)(0x6025237E)
@@ -2798,7 +2798,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x6A16F62D)
 I (../Inc/usbd_conf.h)(0x6A16F62D)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x6A16F62D)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x6A16F62D)
-F (..\Gimbal_Board\Tasks\Shoot_Task.c)(0x6A3318F5)(--c99 -c --cpu Cortex-M4.fp.sp -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Gimbal_Board/Drvs -I ../Gimbal_Board/support -I ../Gimbal_Board/Tasks -I ../Gimbal_Board/BSP -I ../Gimbal_Board/App -I ../Gimbal_Board/algorithm-I.\RTE\_Gimbal_Board-ID:\MDK-ARM\pack\ARM\CMSIS-DSP\1.16.2\Include-ID:\MDK-ARM\pack\ARM\CMSIS-DSP\1.16.2\PrivateInclude-ID:\MDK-ARM\pack\ARM\CMSIS\5.8.0\CMSIS\Core\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -D__FPU_USED="1U" -D__FPU_PRESENT="1U" -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o gimbal_board\shoot_task.o --omf_browse gimbal_board\shoot_task.crf --depend gimbal_board\shoot_task.d)
+F (..\Gimbal_Board\Tasks\Shoot_Task.c)(0x6A35690F)(--c99 -c --cpu Cortex-M4.fp.sp -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Gimbal_Board/Drvs -I ../Gimbal_Board/support -I ../Gimbal_Board/Tasks -I ../Gimbal_Board/BSP -I ../Gimbal_Board/App -I ../Gimbal_Board/algorithm-I.\RTE\_Gimbal_Board-ID:\MDK-ARM\pack\ARM\CMSIS-DSP\1.16.2\Include-ID:\MDK-ARM\pack\ARM\CMSIS-DSP\1.16.2\PrivateInclude-ID:\MDK-ARM\pack\ARM\CMSIS\5.8.0\CMSIS\Core\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -D__FPU_USED="1U" -D__FPU_PRESENT="1U" -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o gimbal_board\shoot_task.o --omf_browse gimbal_board\shoot_task.crf --depend gimbal_board\shoot_task.d)
 I (..\Gimbal_Board\Tasks\Shoot_Task.h)(0x6A32ACC3)
 I (../Inc/main.h)(0x6A16F62D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6A16F62D)
@@ -2853,7 +2853,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x6A16F62E)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x6A16F62E)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x6A16F62E)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x6A16F62E)
-I (../Gimbal_Board/BSP/bsp_can_gimbal.h)(0x6A3547C6)
+I (../Gimbal_Board/BSP/bsp_can_gimbal.h)(0x6A357CF0)
 I (../Inc/can.h)(0x6A16F62D)
 I (../Gimbal_Board/App/pid.h)(0x6A16F62D)
 I (../Gimbal_Board/App/struct_typedef.h)(0x6A16F62D)
@@ -2901,10 +2901,10 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x6A16F62D)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x6A16F62D)
 I (../Gimbal_Board/App/Vofa_send.h)(0x6A16F62D)
 I (../Gimbal_Board/support/user_common_lib.h)(0x6A16F62D)
-I (../Gimbal_Board/App/motor.h)(0x6A32F009)
+I (../Gimbal_Board/App/motor.h)(0x6A3567BD)
 I (..\Gimbal_Board\Tasks\detect_task.h)(0x6A16F62D)
-F (..\Gimbal_Board\Tasks\Gimbal_Task.c)(0x6A331D3C)(--c99 -c --cpu Cortex-M4.fp.sp -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Gimbal_Board/Drvs -I ../Gimbal_Board/support -I ../Gimbal_Board/Tasks -I ../Gimbal_Board/BSP -I ../Gimbal_Board/App -I ../Gimbal_Board/algorithm-I.\RTE\_Gimbal_Board-ID:\MDK-ARM\pack\ARM\CMSIS-DSP\1.16.2\Include-ID:\MDK-ARM\pack\ARM\CMSIS-DSP\1.16.2\PrivateInclude-ID:\MDK-ARM\pack\ARM\CMSIS\5.8.0\CMSIS\Core\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -D__FPU_USED="1U" -D__FPU_PRESENT="1U" -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o gimbal_board\gimbal_task.o --omf_browse gimbal_board\gimbal_task.crf --depend gimbal_board\gimbal_task.d)
-I (..\Gimbal_Board\Tasks\Gimbal_Task.h)(0x6A32F24B)
+F (..\Gimbal_Board\Tasks\Gimbal_Task.c)(0x6A35929D)(--c99 -c --cpu Cortex-M4.fp.sp -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Gimbal_Board/Drvs -I ../Gimbal_Board/support -I ../Gimbal_Board/Tasks -I ../Gimbal_Board/BSP -I ../Gimbal_Board/App -I ../Gimbal_Board/algorithm-I.\RTE\_Gimbal_Board-ID:\MDK-ARM\pack\ARM\CMSIS-DSP\1.16.2\Include-ID:\MDK-ARM\pack\ARM\CMSIS-DSP\1.16.2\PrivateInclude-ID:\MDK-ARM\pack\ARM\CMSIS\5.8.0\CMSIS\Core\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -D__FPU_USED="1U" -D__FPU_PRESENT="1U" -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o gimbal_board\gimbal_task.o --omf_browse gimbal_board\gimbal_task.crf --depend gimbal_board\gimbal_task.d)
+I (..\Gimbal_Board\Tasks\Gimbal_Task.h)(0x6A357C10)
 I (../Inc/main.h)(0x6A16F62D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6A16F62D)
 I (../Inc/stm32f4xx_hal_conf.h)(0x6A16F62D)
@@ -2964,7 +2964,7 @@ I (../Gimbal_Board/Drvs/bmi088driver.h)(0x6A16F62D)
 I (../Gimbal_Board/App/pid.h)(0x6A16F62D)
 I (../Gimbal_Board/App/remote_control.h)(0x6A16F62D)
 I (../Gimbal_Board/BSP/bsp_rc.h)(0x6A16F62D)
-I (../Gimbal_Board/BSP/bsp_can_gimbal.h)(0x6A3547C6)
+I (../Gimbal_Board/BSP/bsp_can_gimbal.h)(0x6A357CF0)
 I (../Inc/can.h)(0x6A16F62D)
 I (../Gimbal_Board/BSP/bsp_DMIMU.h)(0x6A16F62D)
 I (../Gimbal_Board/BSP/bsp_dwt.h)(0x6A16F62D)
@@ -3006,7 +3006,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x6A16F62D
 I (../Gimbal_Board/App/referee.h)(0x6A227781)
 I (../Gimbal_Board/App/protocol.h)(0x6A16F62D)
 I (../Gimbal_Board/support/fifo.h)(0x6A16F62D)
-I (../Gimbal_Board/App/motor.h)(0x6A32F009)
+I (../Gimbal_Board/App/motor.h)(0x6A3567BD)
 I (../Gimbal_Board/App/Vofa_send.h)(0x6A16F62D)
 I (..\Gimbal_Board\Tasks\detect_task.h)(0x6A16F62D)
 I (../Gimbal_Board/support/user_common_lib.h)(0x6A16F62D)
@@ -3465,8 +3465,8 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x6A16F62E)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x6A16F62E)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x6A16F62E)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x6A16F62E)
-F (..\Gimbal_Board\BSP\bsp_can_gimbal.c)(0x6A354786)(--c99 -c --cpu Cortex-M4.fp.sp -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Gimbal_Board/Drvs -I ../Gimbal_Board/support -I ../Gimbal_Board/Tasks -I ../Gimbal_Board/BSP -I ../Gimbal_Board/App -I ../Gimbal_Board/algorithm-I.\RTE\_Gimbal_Board-ID:\MDK-ARM\pack\ARM\CMSIS-DSP\1.16.2\Include-ID:\MDK-ARM\pack\ARM\CMSIS-DSP\1.16.2\PrivateInclude-ID:\MDK-ARM\pack\ARM\CMSIS\5.8.0\CMSIS\Core\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -D__FPU_USED="1U" -D__FPU_PRESENT="1U" -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o gimbal_board\bsp_can_gimbal.o --omf_browse gimbal_board\bsp_can_gimbal.crf --depend gimbal_board\bsp_can_gimbal.d)
-I (..\Gimbal_Board\BSP\bsp_can_gimbal.h)(0x6A3547C6)
+F (..\Gimbal_Board\BSP\bsp_can_gimbal.c)(0x6A356981)(--c99 -c --cpu Cortex-M4.fp.sp -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Gimbal_Board/Drvs -I ../Gimbal_Board/support -I ../Gimbal_Board/Tasks -I ../Gimbal_Board/BSP -I ../Gimbal_Board/App -I ../Gimbal_Board/algorithm-I.\RTE\_Gimbal_Board-ID:\MDK-ARM\pack\ARM\CMSIS-DSP\1.16.2\Include-ID:\MDK-ARM\pack\ARM\CMSIS-DSP\1.16.2\PrivateInclude-ID:\MDK-ARM\pack\ARM\CMSIS\5.8.0\CMSIS\Core\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -D__FPU_USED="1U" -D__FPU_PRESENT="1U" -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o gimbal_board\bsp_can_gimbal.o --omf_browse gimbal_board\bsp_can_gimbal.crf --depend gimbal_board\bsp_can_gimbal.d)
+I (..\Gimbal_Board\BSP\bsp_can_gimbal.h)(0x6A357CF0)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x6A16F62E)
 I (D:\MDK-ARM\core\ARM\ARMCC\include\stddef.h)(0x6025237E)
 I (D:\MDK-ARM\core\ARM\ARMCC\include\stdint.h)(0x6025237E)
@@ -3524,7 +3524,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x6A16F62E
 I (../Gimbal_Board/App/pid.h)(0x6A16F62D)
 I (../Gimbal_Board/App/struct_typedef.h)(0x6A16F62D)
 I (..\Gimbal_Board\BSP\bsp_dwt.h)(0x6A16F62D)
-I (../Gimbal_Board/App/motor.h)(0x6A32F009)
+I (../Gimbal_Board/App/motor.h)(0x6A3567BD)
 I (../Gimbal_Board/Tasks/detect_task.h)(0x6A16F62D)
 I (../Gimbal_Board/support/user_common_lib.h)(0x6A16F62D)
 I (..\Gimbal_Board\BSP\bsp_DMIMU.h)(0x6A16F62D)
@@ -3921,7 +3921,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x6A16F62E)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x6A16F62E)
 I (../Gimbal_Board/BSP/bsp_delay.h)(0x6A16F62D)
 F (..\Gimbal_Board\App\motor.c)(0x6A32E8E1)(--c99 -c --cpu Cortex-M4.fp.sp -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Gimbal_Board/Drvs -I ../Gimbal_Board/support -I ../Gimbal_Board/Tasks -I ../Gimbal_Board/BSP -I ../Gimbal_Board/App -I ../Gimbal_Board/algorithm-I.\RTE\_Gimbal_Board-ID:\MDK-ARM\pack\ARM\CMSIS-DSP\1.16.2\Include-ID:\MDK-ARM\pack\ARM\CMSIS-DSP\1.16.2\PrivateInclude-ID:\MDK-ARM\pack\ARM\CMSIS\5.8.0\CMSIS\Core\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -D__FPU_USED="1U" -D__FPU_PRESENT="1U" -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o gimbal_board\motor.o --omf_browse gimbal_board\motor.crf --depend gimbal_board\motor.d)
-I (..\Gimbal_Board\App\motor.h)(0x6A32F009)
+I (..\Gimbal_Board\App\motor.h)(0x6A3567BD)
 I (..\Gimbal_Board\App\struct_typedef.h)(0x6A16F62D)
 I (..\Gimbal_Board\App\pid.h)(0x6A16F62D)
 F (..\Gimbal_Board\App\pid.c)(0x6A16F62D)(--c99 -c --cpu Cortex-M4.fp.sp -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Gimbal_Board/Drvs -I ../Gimbal_Board/support -I ../Gimbal_Board/Tasks -I ../Gimbal_Board/BSP -I ../Gimbal_Board/App -I ../Gimbal_Board/algorithm-I.\RTE\_Gimbal_Board-ID:\MDK-ARM\pack\ARM\CMSIS-DSP\1.16.2\Include-ID:\MDK-ARM\pack\ARM\CMSIS-DSP\1.16.2\PrivateInclude-ID:\MDK-ARM\pack\ARM\CMSIS\5.8.0\CMSIS\Core\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -D__FPU_USED="1U" -D__FPU_PRESENT="1U" -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o gimbal_board\pid.o --omf_browse gimbal_board\pid.crf --depend gimbal_board\pid.d)
@@ -4295,9 +4295,9 @@ I (../Gimbal_Board/support/fifo.h)(0x6A16F62D)
 I (../Inc/tim.h)(0x6A16F62D)
 I (../Inc/usb_device.h)(0x6A16F62D)
 I (../Gimbal_Board/Tasks/Shoot_Task.h)(0x6A32ACC3)
-I (../Gimbal_Board/Tasks/Gimbal_Task.h)(0x6A32F24B)
+I (../Gimbal_Board/Tasks/Gimbal_Task.h)(0x6A357C10)
 I (../Gimbal_Board/Tasks/detect_task.h)(0x6A16F62D)
-I (..\Gimbal_Board\App\motor.h)(0x6A32F009)
+I (..\Gimbal_Board\App\motor.h)(0x6A3567BD)
 F (..\Gimbal_Board\algorithm\AHRS.lib)(0x6A16F62D)()
 F (..\Gimbal_Board\algorithm\AHRS_middleware.c)(0x6A16F62D)(--c99 -c --cpu Cortex-M4.fp.sp -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Gimbal_Board/Drvs -I ../Gimbal_Board/support -I ../Gimbal_Board/Tasks -I ../Gimbal_Board/BSP -I ../Gimbal_Board/App -I ../Gimbal_Board/algorithm-I.\RTE\_Gimbal_Board-ID:\MDK-ARM\pack\ARM\CMSIS-DSP\1.16.2\Include-ID:\MDK-ARM\pack\ARM\CMSIS-DSP\1.16.2\PrivateInclude-ID:\MDK-ARM\pack\ARM\CMSIS\5.8.0\CMSIS\Core\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -D__FPU_USED="1U" -D__FPU_PRESENT="1U" -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o gimbal_board\ahrs_middleware.o --omf_browse gimbal_board\ahrs_middleware.crf --depend gimbal_board\ahrs_middleware.d)
 I (..\Gimbal_Board\algorithm\AHRS_MiddleWare.h)(0x6A16F62D)

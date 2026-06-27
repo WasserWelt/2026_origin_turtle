@@ -13,7 +13,7 @@
 #define GM6020_ENC_TO_DEGREE 0.043945f //  360/8192
 /****************************************重力补偿参数*******************************************************/
 #define PITCH_MOTOR_GRAVITY_STATIC_COMPENSATE (0) // 用于补偿重力，pitch轴质心与转轴的连线与地面平行时抵消重力所需的力矩，单位是发给6020电机的目标电流
-#define PITCH_CENTROID_OFFSET_ANGLE -55.28313f // 补偿pitch的INS_angle
+#define PITCH_CENTROID_OFFSET_ANGLE 0.0f // 补偿pitch的INS_angle
 /**************************************************PID,前馈系数************************************************************************/
 #define BIG_YAW_MOTOR_SPEED_PID_KP 0.05f
 #define BIG_YAW_MOTOR_SPEED_PID_KI 0.0002f // 80.0f
@@ -48,11 +48,11 @@
 #define BIG_YAW_MOTOR_AUTO_AIM_PID_MAX_OUT 120.0f
 #define BIG_YAW_MOTOR_AUTO_AIM_PID_MAX_IOUT 0.0f
 
-#define SMALL_YAW_MOTOR_NORMAL_SPEED_PID_KP 15.0f //200
+#define SMALL_YAW_MOTOR_NORMAL_SPEED_PID_KP 100.0f //200
 #define SMALL_YAW_MOTOR_NORMAL_SPEED_PID_KI 0.001f 
 #define SMALL_YAW_MOTOR_NORMAL_SPEED_PID_KD 5.0f
 
-#define SMALL_YAW_MOTOR_RC_SPEED_PID_KP 15.0f // 遥控器控制的时候p改小，防止p轴震
+#define SMALL_YAW_MOTOR_RC_SPEED_PID_KP 100.0f // 遥控器控制的时候p改小，防止p轴震
 #define SMALL_YAW_MOTOR_RC_SPEED_PID_KI 0.001f
 #define SMALL_YAW_MOTOR_RC_SPEED_PID_KD 10.0f
 
@@ -97,10 +97,10 @@
 #define PITCH_MOTOR_AUTO_AIM_PID_MAX_OUT 2000.0f
 #define PITCH_MOTOR_AUTO_AIM_PID_MAX_IOUT 0.0f
 /****************************************云台零点，限位，电机运动参数*******************************************************/
-#define SMALL_YAW_MIDDLE_ENC_ZERO 5490//6009 // 小yaw轴中间位置编码器值，作为大yaw轴跟随小yaw轴时的参考零点
+#define SMALL_YAW_MIDDLE_ENC_ZERO 40 // 小yaw轴中间位置编码器值，作为大yaw轴跟随小yaw轴时的参考零点
 
-#define SMALL_YAW_NAV_SEEK_ECD_MAX 6650 //导航索敌模式搜索角度最大值,为小yaw电机编码器值
-#define SMALL_YAW_NAV_SEEK_ECD_MIN 5400 //导航索敌模式搜索角度最小值，为小yaw电机编码器值减去8192（跟安装位置有关，索敌时电机活动范围越过编码器零点了）
+#define SMALL_YAW_NAV_SEEK_ECD_MAX 178 //导航索敌模式搜索角度最大值,为小yaw电机编码器值 278 7673
+#define SMALL_YAW_NAV_SEEK_ECD_MIN 7573 //导航索敌模式搜索角度最小值，为小yaw电机编码器值减去8192（跟安装位置有关，索敌时电机活动范围越过编码器零点了）
 #define SMALL_YAW_NAV_SEEK_STEP 0.16 //导航索敌模式下小yaw轴每次调整的角度步进，单位：度
 // 6629 4922
 #define SMALL_YAW_AUTOAIM_ECD_MAX 5970

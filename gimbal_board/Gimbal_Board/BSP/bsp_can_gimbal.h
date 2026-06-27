@@ -36,7 +36,7 @@
 
 #define BIG_YAW_DMIMU_TransID 0x15        // CAN2,imu can 发送
 #define DIAL_TransID 0x141                // CAN2,拨盘电机
-#define SMALL_PITCH_MF6015_CMD 0x1FF      // CAN2,小pitchs
+#define SMALL_PITCH_MF6015_CMD 0x1FE      // CAN2,小pitchs
 #define FRIC_M3508_TransID 0x200          // CAN2,两个3508一起发
 /***********************************************************************************/
 

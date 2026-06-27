@@ -170,7 +170,7 @@ typedef struct
 extern motor_measure_t motor_measure_steer[4];  // 底盘舵电机6020
 extern motor_measure_t motor_measure_wheel[4];  // 底盘轮电机3508
 extern motor_measure_t motor_measure_small_yaw; // 小yaw电机6020
-extern motor_measure_t motor_measure_pitch; // pitch MF6015 (LK协议)
+extern motor_measure_t motor_measure_pitch;     // pitch MF6015 (LK协议)
 extern motor_measure_t motor_measure_fric[2];   // 摩擦轮电机3508
 extern LK_motor_measure_t motor_measure_dial;   // 拨弹盘电机
 /***********************电机控制结构体***********************************/
